@@ -23,8 +23,7 @@ LayoutInflater.from(parent.context).inflate(R.layout.adapter_note, parent,
         )
     }
 
-    override fun onBindViewHolder(holder: NoteViewHolder, position:
-Int) {
+    override fun onBindViewHolder(holder: NoteViewHolder, position: Int) {
         val note = notes[position]
         holder.view.text_title.text = note.title
         holder.view.text_title.setOnClickListener {
@@ -40,8 +39,7 @@ Int) {
 
     override fun getItemCount() = notes.size
 
-    inner class NoteViewHolder(val view: View) :
-RecyclerView.ViewHolder(view)
+    inner class NoteViewHolder(val view: View) : RecyclerView.ViewHolder(view)
 
     @SuppressLint("NotifyDataSetChanged")
     fun setData(list: List<Note>) {
